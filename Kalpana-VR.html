@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kalpana VR — Imagine. Experience. Learn.</title>
+  <meta name="description" content="Kalpana VR - Affordable Virtual Reality learning platform for future-ready skills" />
+  <style>
+    :root{
+      --bg1:#060816; --bg2:#07102a; --accent:#00e0c6; --muted:#9aa4bf;
+      --card: rgba(255,255,255,0.03);
+      --glass: rgba(255,255,255,0.04);
+      --maxw:1100px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(135deg,var(--bg1),var(--bg2));color:#eef2ff}
+    a{color:var(--accent);text-decoration:none}
+    .wrap{max-width:var(--maxw);margin:24px auto;padding:24px}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,#0fffd8, #2a8fff);display:flex;align-items:center;justify-content:center;font-weight:800;color:#021;box-shadow:0 6px 18px rgba(0,0,0,0.5)}
+    .brand h1{margin:0;font-size:20px;letter-spacing:0.3px}
+    nav{display:flex;gap:14px}
+    nav a{font-weight:600;color:var(--muted)}
+
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin:24px 0}
+    .hero .card{background:var(--card);padding:28px;border-radius:14px;backdrop-filter: blur(6px);box-shadow:0 6px 30px rgba(3,10,30,0.6)}
+    .hero h2{margin:0 0 8px 0;font-size:28px}
+    .hero p{margin:0;color:var(--muted);line-height:1.5}
+    .cta{margin-top:18px;display:flex;gap:12px}
+    .btn{background:linear-gradient(90deg,var(--accent),#2b9bff);color:#002528;padding:10px 16px;border-radius:10px;border:none;font-weight:700;cursor:pointer}
+    .ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 14px;border-radius:10px;color:var(--muted)}
+
+    .stats{display:flex;gap:12px;margin-top:18px}
+    .stat{background:var(--glass);padding:12px;border-radius:10px;color:var(--muted)}
+
+    section{margin:30px 0}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .card-s{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px}
+
+    table{width:100%;border-collapse:collapse;color:var(--muted)}
+    table td, table th{padding:8px;border-bottom:1px dashed rgba(255,255,255,0.03)}
+
+    .team{display:flex;gap:12px;flex-wrap:wrap}
+    .member{background:var(--card);padding:12px;border-radius:10px;min-width:180px}
+    .member h4{margin:0 0 6px 0}
+    .member p{margin:0;color:var(--muted)}
+
+    footer{padding:18px 0;color:var(--muted);text-align:center}
+
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      nav{display:none}
+    }
+
+    .logo{transform:translateY(0);animation:float 6s ease-in-out infinite}
+    @keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+    .fade-up{opacity:0;transform:translateY(10px);animation:fadeUp .9s ease forwards}
+    .delay-1{animation-delay:.1s}.delay-2{animation-delay:.2s}.delay-3{animation-delay:.3s}
+    @keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">KV</div>
+        <div>
+          <h1>Kalpana VR</h1>
+          <div style="font-size:12px;color:var(--muted)">Imagine. Experience. Learn.</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#problem">Problem</a>
+        <a href="#solution">Solution</a>
+        <a href="#features">Features</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="card fade-up delay-1">
+          <h2>Kalpana VR — Virtual Reality for Future-Ready Learning</h2>
+          <p>Transforming classrooms with affordable, immersive VR experiences. Teach science, robotics, renewable energy and more — without expensive labs.</p>
+
+          <div class="cta">
+            <button class="btn" onclick="document.location='#solution'">See Solution</button>
+            <button class="ghost" onclick="downloadPDF()">Download Summary</button>
+          </div>
+
+          <div class="stats">
+            <div class="stat">Pilot Cost: <strong style="color:var(--accent)">₹8,250</strong></div>
+            <div class="stat">Headsets: <strong style="color:var(--accent)">5</strong></div>
+          </div>
+        </div>
+
+        <div class="card-s fade-up delay-2" style="display:flex;flex-direction:column;gap:12px;align-items:center;justify-content:center">
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='220'><rect width='100%' height='100%' rx='14' fill='%2307122b'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%23aee9d6' font-size='20' font-family='Arial'>Kalpana VR</text></svg>" alt="hero" style="width:100%;border-radius:10px;"/>
+          <div style="font-size:13px;color:var(--muted);text-align:center">Affordable VR learning using Google Cardboard and simple mobile devices.</div>
+        </div>
+      </section>
+
+      <section id="problem">
+        <h3>Problem</h3>
+        <div class="card-s grid">
+          <div>
+            <h4>What’s wrong?</h4>
+            <p style="color:var(--muted)">Many schools lack labs, equipment and modern teaching methods. Students learn theory but miss practical experience, reducing employability and creativity.</p>
+          </div>
+          <div>
+            <h4>Who is affected?</h4>
+            <p style="color:var(--muted)">Students, teachers, schools, parents, and industries—especially in rural and resource-limited areas.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="solution">
+        <h3>Solution</h3>
+        <div class="card-s">
+          <p style="color:var(--muted)">Kalpana VR offers immersive 3D lessons and virtual experiments that run on low-cost headsets and teacher smartphones. Content is created with Unity/Blender and can be updated easily. This bridges the gap between theory and practice and prepares students with future-ready skills.</p>
+        </div>
+      </section>
+
+      <section id="features">
+        <h3>Features</h3>
+        <div class="grid">
+          <div class="card-s">
+            <h4>Immersive Modules</h4>
+            <p style="color:var(--muted)">Short, curriculum-aligned VR lessons (solar, robotics, biology demos).</p>
+          </div>
+          <div class="card-s">
+            <h4>Low-cost Hardware</h4>
+            <p style="color:var(--muted)">Uses Google Cardboard & teacher smartphones to keep costs low.</p>
+          </div>
+          <div class="card-s">
+            <h4>Teacher Friendly</h4>
+            <p style="color:var(--muted)">Simple deployment, offline-compatible, and easy teacher guides.</p>
+          </div>
+          <div class="card-s">
+            <h4>Scalable</h4>
+            <p style="color:var(--muted)">Module library can grow; integrate with Skill India & Digital India initiatives.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="team">
+        <h3>Team</h3>
+        <div class="team">
+          <div class="member">
+            <h4>Idea</h4>
+            <p>Kedasi Sandeep Sri Charan</p>
+          </div>
+          <div class="member">
+            <h4>Coding</h4>
+            <p>Kedasi Sandeep Sri Charan</p>
+          </div>
+          <div class="member">
+            <h4>Presentation</h4>
+            <p>Ganesh & Group</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="materials">
+        <h3>Materials & Cost (Pilot)</h3>
+        <div class="card-s">
+          <table>
+            <tr><th>Item</th><th>Qty</th><th>Cost (₹)</th></tr>
+            <tr><td>Google Cardboard</td><td>5</td><td>650 × 5 = 3,250</td></tr>
+            <tr><td>Laptop (personal)</td><td>1</td><td>—</td></tr>
+            <tr><td>Internet & Maintenance</td><td>—</td><td>3,000</td></tr>
+            <tr><td>Sensors / controllers (optional)</td><td>2</td><td>2,000</td></tr>
+            <tr style="font-weight:700"><td>Total (approx.)</td><td>—</td><td>8,250</td></tr>
+          </table>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h3>Contact & Mentor</h3>
+        <div class="card-s">
+          <p style="color:var(--muted)">School: [Your School Name] <br/> Mentor: [Teacher Name] <br/> Email: [email@example.com]</p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      Kalpana VR — Imagine. Experience. Learn. • Prepared by Kedasi Sandeep Sri Charan • Idea & Coding by Kedasi Sandeep Sri Charan • Presentation by Ganesh & Group • Selected for School Level
+    </footer>
+  </div>
+
+  <script>
+    function downloadPDF(){
+      alert('PDF download option: Use the project PDF prepared earlier or request a PDF export.');
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        e.preventDefault();
+        document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+      })
+    })
+  </script>
+</body>
+</html>
